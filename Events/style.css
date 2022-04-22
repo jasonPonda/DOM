@@ -1,0 +1,32 @@
+.body {
+    transition: all 1s ease-in-out;
+  }
+
+.displayedsquare {
+    transform: translateX(-50%);
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.displayedsquare:hover {
+    transform: scale(1.5);
+}
+
+.displayedsquare-wrapper {
+    transform: translateX(-50%);
+    height: 100px;
+    width: 100px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 90px;
+    padding: 150px;
+    margin-top: 20%;
+}
+
+h1 {
+    margin-left: 80px;
+}
