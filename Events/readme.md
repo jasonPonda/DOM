@@ -69,7 +69,7 @@ Open the [script.js](./script.js) file and edit it, so that:
 - Everytime the user clicks on one of the action squares
   - Create a new `<div>` with a class `.displayedsquare` and the corresponding clicked color in the div above (`.displayedsquare-wrapper`)
   - Create a new `<li>` in the log below to state when the action was done
-![It should look like this](../assets/event-exercise.gif)
+![It should look like this](images/event-exercise.gif)
 - Add an event listener on the document `<body>`, listening for the `keypress` event. (hint: [have a look at this](https://keycode.info/))
   - When the `spacebar` is hit randomly change the background color of the whole page
   - Log when the `spacebar` is used the same way you used for the generated squares.

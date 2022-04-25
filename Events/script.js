@@ -1,45 +1,31 @@
-let section = document.querySelector('section')
-section.className = 'container'
+const _initTime = Date.now()
 
-function displayWrapper() {
-    let divAbove = document.createElement('div')
-    divAbove.className = 'displayedsquare-wrapper'
-    divAbove = div1.cloneNode(true)
-
-    let ul = document.createElement('ul')
-    let li = document.createElement('li')
-
-    ul.appendChild(li)
-    
-    section.before(divAbove)
-    
+const getElapsedTime = () => {
+  return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
 }
 
-let div1 = document.createElement('div')
-div1.className = 'displayedsquare'
-div1.style.background = 'green'
-div1.addEventListener('click', displayWrapper)
+const clickOnSquare = (e) => {
+  const div1 = document.createElement('div')
+  section1.appendChild(div1)
+  div1.className = 'displayedquare'
+  const name = e.target.classList[1]
+  const ul = document.querySelector('ul')
+  const li = document.createElement('li')
+  ul.appendChild(li)
+  li.innerHTML = `[${getElapsedTime()}] created a new ${name} square`
+  
+  if(e.target.classList.contains('violet')) return div1.style.backgroundColor = 'magenta'
+  if(e.target.classList.contains('green')) return div1.style.backgroundColor = 'lime'
+  if(e.target.classList.contains('orange')) return div1.style.backgroundColor = 'orange'
+}
 
-let div2 = document.createElement('div')
-div2.className = 'displayedsquare'
-div2.style.background = 'violet'
-div2.addEventListener('click', displayWrapper)
-
-let div3 = document.createElement('div')
-div3.className = 'displayedsquare'
-div3.style.background = 'orange'
-div3.addEventListener('click', displayWrapper)
-
-section.appendChild(div1)
-section.appendChild(div2)
-section.appendChild(div3)
+const actionSquares = document.querySelectorAll('.actionsquare')
+for (let actionSquare of actionSquares) {
+  actionSquare.addEventListener('click', clickOnSquare)
+}
 
 
-const h1 = document.createElement('h1')
-h1.textContent = 'Action log'
-
-document.body.appendChild(h1)
-
+const section1 = document.querySelector('section')
 
 
 /* Body Background color change */

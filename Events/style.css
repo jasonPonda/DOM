@@ -1,32 +1,38 @@
-.body {
-    transition: all 1s ease-in-out;
+body{
+    margin: auto;
+    transition: .3s;
   }
-
-.displayedsquare {
-    transform: translateX(-50%);
-    height: 100px;
-    width: 100px;
-    cursor: pointer;
-}
-
-.displayedsquare:hover {
+  
+  .actionsquare, .displayedsquare{
+    margin: 25px;
+    height: 50px;
+    width: 50px;
+    transition: .3s;
+  }
+  
+  .actionsquare:hover{
     transform: scale(1.5);
-}
-
-.displayedsquare-wrapper {
-    transform: translateX(-50%);
-    height: 100px;
-    width: 100px;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 90px;
-    padding: 150px;
-    margin-top: 20%;
-}
-
-h1 {
-    margin-left: 80px;
-}
+    cursor: pointer;
+  }
+  
+  .green{
+    background-color: lime;
+  }
+  
+  .violet{
+    background-color: magenta;
+  }
+  
+  .orange{
+    background-color: orange;
+  }
+  
+  .actionsquare-wrapper, .displayedsquare-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  main{
+    max-width: 1000px;
+    margin: 100px auto;
+  }
